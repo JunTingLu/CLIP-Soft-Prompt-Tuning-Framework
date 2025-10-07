@@ -1,5 +1,5 @@
 origin_dataset/
-captions_0924.csv
-captions_fianl.csv
-captions.txt
-yolov8l.pt
+src/captions_0924.csv
+src/captions_final.csv
+src/captions.txt
+src/yolov8l.pt
