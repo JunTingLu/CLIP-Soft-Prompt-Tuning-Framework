@@ -15,5 +15,18 @@ Soft Prompt 是一種可學習的連續向量，用來引導語言模型的行�
 ---
 ### File Structure
 
-
 ---
+### Installation
+```
+pip install -r requirements.txt
+```
+---
+### Quick Start
+1. Fine-tuning with softprompt
+```
+python 
+```
+2. Complete run
+```
+python 
+```
