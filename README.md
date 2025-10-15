@@ -7,13 +7,13 @@ A lightweight framework for fine-tuning Vision-Language Models (VLM) using Soft 
 Soft Prompting introduces **learnable continuous vectors** that guide the model’s behavior.  
 Unlike traditional *hard prompts* (human-readable text), soft prompts are **trainable embeddings** prepended to the model’s input.
 
-#### Traditional Hard Prompt
+#### 🧱 Traditional Hard Prompt
 ```
 Input: "Please describe this image:"
 Image: [Dog image]
 Output: "This is a cute dog..."
 ```
-#### Soft Prompt
+#### 🧠 Soft Prompt
 ```
 Input: [Learnable Soft Vector] + Image Features + Text
 Soft Prompt: [0.1, -0.3, 0.8, ...]
