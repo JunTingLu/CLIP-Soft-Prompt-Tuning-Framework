@@ -54,11 +54,11 @@ Output: "This is a cute little dog..."
 
 ---
 ### 🚀 Quick Start
-1. Installation
+1. **Installation**
 ```
 pip install -r requirements.txt
 ```
-2. Data Format Example
+2. **Data Format Example**
 ```
   [
     {
@@ -71,12 +71,12 @@ pip install -r requirements.txt
     },...
   ]
 ```
-3. Fine-tuning 
+3. **Fine-tuning**
 ```
 python soft_prompt_tuning.py
 ```
 
-4. Run Complete Pipeline
+4. **Run Complete Pipeline**
 ```
 python soft_prompt_tuning.py
 ```
