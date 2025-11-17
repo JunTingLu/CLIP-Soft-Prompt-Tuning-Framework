@@ -89,7 +89,7 @@ python src/soft_prompt_tuning.py \
     --device cuda
 
 ```
-
+---
 ### 🔧 Key Modules
 1. `SoftPrompt` class
   ```
@@ -134,13 +134,13 @@ python src/soft_prompt_tuning.py \
 ### 📈 Evaluation Metric — Recall@K
 Recall@K measures the proportion of correct target images retrieved within the top K results, serving as a key metric for evaluating text-to-image retrieval accuracy.
 A higher Recall@K indicates stronger alignment between textual and visual representations.
-
+---
 ## Development Notes
 - Uses CLIP from openai/clip-vit-base-patch32
 - Only optimizes soft prompts (encoder frozen)
 - Supports GPU / MPS / CPU fallback
 - Dataset loader auto-resizes images to CLIP input size
-
+---
 ### 📚 Reference
 - [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/abs/2104.08691)
 - [OpenAI CLIP](https://github.com/openai/CLIP)
