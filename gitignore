@@ -3,3 +3,5 @@ src/captions_0924.csv
 src/captions_final.csv
 src/captions.txt
 src/yolov8l.pt
+src/RLHF_usage.py
+src/soft_pompt_rlhf.py

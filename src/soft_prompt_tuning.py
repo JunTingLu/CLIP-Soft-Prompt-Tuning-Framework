@@ -94,7 +94,6 @@ class VLMWithSoftPrompt(nn.Module):
                     prompt_length: int = 10):
         """
         初始化 VLM 模型
-        
         Args:
             vision_model_name: CLIP 視覺模型名稱
             language_model_name: 語言模型名稱
@@ -195,7 +194,6 @@ class VLMWithSoftPrompt(nn.Module):
             attention_mask=new_attention_mask,
             labels=None  # 我們會手動計算損失
         )
-        
         return outputs
     
     
@@ -373,7 +371,7 @@ def create_sample_data():
         json.dump(training_data, f, ensure_ascii=False, indent=2)
     print("訓練數據已創建！")
     
-# 執行主程式
+
 def main():
     """主函數 - 完整的訓練流程"""
     EPOCH = 10 
