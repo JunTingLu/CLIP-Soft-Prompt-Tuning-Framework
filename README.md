@@ -43,13 +43,14 @@ Output: "This is a cute little dog..."
 ---
 ### 📁 File Structure
 ```text
-├── dataset/
-├── soft_prompt_tuning.py
-├── modules/
-│ ├── soft_prompt.py
-│ ├── vlm_with_softprompt.py
-├── requirements.txt
-└── README.md
+CLIP-Soft-Prompt-Tuning-Framework/
+│
+├── requirements.txt        
+├── README.md               
+│
+└── src/
+    ├── preprocess_data.py  
+    └── soft_prompt_tuning.py            
 ```
 
 ---
@@ -71,14 +72,22 @@ pip install -r requirements.txt
     },...
   ]
 ```
-3. **Fine-tuning**
-```
-python soft_prompt_tuning.py
+Run preprocessing:
+```bash
+python src/preprocess_data.py \
+    --input_path ./dataset/captions.csv \
+    --output_path ./dataset/captions_cleaned.csv
 ```
 
-4. **Run Complete Pipeline**
-```
-python soft_prompt_tuning.py
+3. **Train Soft Prompt Tuning**
+```bash
+python src/soft_prompt_tuning.py \
+    --file_path ./dataset/captions_cleaned.csv \
+    --epochs 10 \
+    --batch_size 16 \
+    --lr 1e-4 \
+    --device cuda
+
 ```
 
 ### 🔧 Key Modules
@@ -126,6 +135,11 @@ python soft_prompt_tuning.py
 Recall@K measures the proportion of correct target images retrieved within the top K results, serving as a key metric for evaluating text-to-image retrieval accuracy.
 A higher Recall@K indicates stronger alignment between textual and visual representations.
 
+## Development Notes
+- Uses CLIP from openai/clip-vit-base-patch32
+- Only optimizes soft prompts (encoder frozen)
+- Supports GPU / MPS / CPU fallback
+- Dataset loader auto-resizes images to CLIP input size
 
 ### 📚 Reference
 - [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/abs/2104.08691)
