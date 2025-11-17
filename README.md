@@ -132,8 +132,10 @@ python src/soft_prompt_tuning.py \
   ```
 ---
 ### 📈 Evaluation Metric — Recall@K
+
 Recall@K measures the proportion of correct target images retrieved within the top K results, serving as a key metric for evaluating text-to-image retrieval accuracy.
 A higher Recall@K indicates stronger alignment between textual and visual representations.
+
 ---
 ## Development Notes
 - Uses CLIP from openai/clip-vit-base-patch32
